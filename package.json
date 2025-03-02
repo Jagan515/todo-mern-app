@@ -1,10 +1,12 @@
 {
   "name": "todo-mern-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js", // Changed to server.js since it’s the entry point
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js", // For production (Vercel)
+    "dev": "nodemon server.js", // For local development
+    "build": "react-scripts build", // To build React frontend
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,12 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.11.0"
+    "mongoose": "^8.11.0",
+    "react": "^18.2.0", // Add React
+    "react-dom": "^18.2.0", // Add React DOM
+    "react-scripts": "^5.0.1" // Add React build tool
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7" // Add nodemon for dev
   }
 }
